@@ -1,0 +1,106 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    font-family: 'Gabarito', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Sometype Mono', monospace;
+}
+
+.imag {
+    width: 150px;
+    height: 250px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.imag img {
+    width: 150px;
+    height: 250px;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+    z-index: 1;
+}
+
+.imag img.active {
+    opacity: 1;
+}
+
+.imag .slider-number {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-color: rgba(0, 0, 0, .6);
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 20px;
+    z-index: 2;
+    border-radius: 6px;
+}
+
+.control {
+    width: 70%;
+    margin: auto;
+}
+
+.control .back,
+.control .next {
+    background-color: #009688;
+    color: #fff;
+    font-size: 16px;
+    width: 80px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 5px;
+    user-select: none;
+    width: 20%;
+}
+
+.control .back {
+    float: left;
+}
+
+.control .next {
+    float: right;
+}
+
+.control .back.disabled,
+.next.disabled {
+    background-color: rgba(0, 150, 136, .5);
+    cursor: no-drop;
+}
+
+.control .indicators {
+    width: 60%;
+    float: left;
+}
+
+.control .indicators ul {
+    list-style: none;
+    margin: 0;
+    text-align: center;
+}
+
+.control .indicators ul li {
+    display: inline-block;
+    background-color: #f6f6f6f6;
+    color: #333;
+    font-weight: bold;
+    height: 28px;
+    width: 28px;
+    border-radius: 4px;
+    margin: 0 2px;
+    line-height: 28px;
+    cursor: pointer;
+}
+
+.control .indicators ul li.active {
+    background-color: #009688;
+    color: #fff;
+}
